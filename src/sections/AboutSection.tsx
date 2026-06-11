@@ -125,6 +125,7 @@ export default function AboutSection() {
               <img
                 src="https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/bio.jpeg"
                 alt="Rift Stories AI Content Creator — profile portrait"
+                loading="lazy"
                 style={{
                   width: 'clamp(240px, 20vw, 340px)',
                   height: 'clamp(300px, 25vw, 420px)',

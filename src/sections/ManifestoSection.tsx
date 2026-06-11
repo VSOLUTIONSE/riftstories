@@ -164,6 +164,7 @@ export default function ManifestoSection() {
             ref={videoRef}
             src="/images/reveal.jpg"
             alt="AI cinematic data center"
+            loading="lazy"
             style={{
               width: '100%',
               height: '100%',
