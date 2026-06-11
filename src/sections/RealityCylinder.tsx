@@ -16,7 +16,22 @@ export default function RealityCylinder() {
   const rafRef = useRef<number>(0);
   const isMobile = window.innerWidth < 768;
 
-  if (isMobile) return null;
+  if (isMobile) {
+    return (
+      <section
+        style={{
+          position: 'relative',
+          width: '100%',
+          height: '100vh',
+          backgroundColor: 'var(--void-black)',
+          overflow: 'hidden',
+          backgroundImage: 'url(https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/carousel-1.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
+    );
+  }
 
   useEffect(() => {
     const container = canvasRef.current;

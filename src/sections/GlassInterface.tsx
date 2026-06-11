@@ -8,7 +8,63 @@ export default function GlassInterface() {
   const rafRef = useRef<number>(0);
   const isMobile = window.innerWidth < 768;
 
-  if (isMobile) return null;
+  if (isMobile) {
+    return (
+      <section
+        style={{
+          position: 'relative',
+          width: '100%',
+          height: '100vh',
+          backgroundColor: 'var(--void-black)',
+          overflow: 'hidden',
+          backgroundImage: 'url(https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/glass-bg.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div
+          style={{
+            position: 'absolute',
+            top: '60px',
+            left: '24px',
+            zIndex: 2,
+            pointerEvents: 'none',
+          }}
+        >
+          <div className="data-readout" style={{ marginBottom: '8px' }}>
+            RIFT STORIES
+          </div>
+        </div>
+        <div
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            zIndex: 2,
+            pointerEvents: 'none',
+            textAlign: 'center',
+            maxWidth: '700px',
+            width: '90%',
+          }}
+        >
+          <h3
+            className="font-display text-white uppercase"
+            style={{
+              fontSize: 'clamp(28px, 5vw, 64px)',
+              fontWeight: 700,
+              letterSpacing: '-0.02em',
+              lineHeight: 1.1,
+            }}
+          >
+            Telling Stories.
+            <br />
+            <span style={{ color: '#E50914' }}>Reimagining</span> the Future.
+          </h3>
+        </div>
+      </section>
+    );
+  }
 
   useEffect(() => {
     const container = canvasContainerRef.current;
