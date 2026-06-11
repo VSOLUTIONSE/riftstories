@@ -36,7 +36,7 @@ export default function Navigation() {
     fontSize: '12px',
     letterSpacing: '0.05em',
     textTransform: 'uppercase' as const,
-    color: 'rgba(255,255,255,0.6)',
+    color: 'color-mix(in srgb, var(--text-primary) 60%, transparent)',
     background: 'none' as const,
     border: 'none' as const,
     cursor: 'pointer' as const,
@@ -77,13 +77,14 @@ export default function Navigation() {
       style={{
         height: '80px',
         backdropFilter: scrolled ? 'blur(4px)' : 'none',
-        backgroundColor: scrolled ? 'rgba(5, 5, 5, 0.6)' : 'transparent',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+        backgroundColor: scrolled ? 'color-mix(in srgb, var(--void-black) 65%, transparent)' : 'transparent',
+        borderBottom: '1px solid var(--border-subtle)',
       }}
     >
       <div className="flex items-center justify-between h-full px-4 md:px-10">
         <span
-          className="font-display text-white text-xs tracking-[0.05em] uppercase cursor-pointer glitch-hover"
+          className="font-display text-xs tracking-[0.05em] uppercase cursor-pointer glitch-hover"
+          style={{ color: 'var(--text-primary)' }}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           role="button"
           tabIndex={0}
@@ -98,9 +99,7 @@ export default function Navigation() {
         </div>
 
         <div className="flex items-center gap-3">
-          <div className="hidden md:block">
-            <ThemeToggle />
-          </div>
+          <ThemeToggle />
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden glitch-hover"
@@ -115,9 +114,9 @@ export default function Navigation() {
               padding: '8px',
             }}
           >
-            <span style={{ display: 'block', width: '22px', height: '2px', backgroundColor: menuOpen ? 'transparent' : 'rgba(255,255,255,0.6)', transition: 'all 0.3s ease', transform: menuOpen ? 'translateY(7px) rotate(45deg)' : 'none' }} />
-            <span style={{ display: 'block', width: '22px', height: '2px', backgroundColor: 'rgba(255,255,255,0.6)', transition: 'all 0.3s ease', opacity: menuOpen ? 0 : 1 }} />
-            <span style={{ display: 'block', width: '22px', height: '2px', backgroundColor: menuOpen ? 'transparent' : 'rgba(255,255,255,0.6)', transition: 'all 0.3s ease', transform: menuOpen ? 'translateY(-7px) rotate(-45deg)' : 'none' }} />
+            <span style={{ display: 'block', width: '22px', height: '2px', backgroundColor: menuOpen ? 'transparent' : 'var(--text-primary)', transition: 'all 0.3s ease', transform: menuOpen ? 'translateY(7px) rotate(45deg)' : 'none', opacity: menuOpen ? 0 : 0.6 }} />
+            <span style={{ display: 'block', width: '22px', height: '2px', backgroundColor: 'var(--text-primary)', transition: 'all 0.3s ease', opacity: menuOpen ? 0 : 0.6 }} />
+            <span style={{ display: 'block', width: '22px', height: '2px', backgroundColor: menuOpen ? 'transparent' : 'var(--text-primary)', transition: 'all 0.3s ease', transform: menuOpen ? 'translateY(-7px) rotate(-45deg)' : 'none', opacity: menuOpen ? 0 : 0.6 }} />
           </button>
         </div>
       </div>
@@ -144,13 +143,32 @@ export default function Navigation() {
         }}
       >
         <button
+          onClick={() => setMenuOpen(false)}
+          aria-label="Close menu"
+          style={{
+            position: 'absolute',
+            top: '16px',
+            right: '16px',
+            background: 'none',
+            border: 'none',
+            color: 'var(--text-primary)',
+            fontSize: '24px',
+            cursor: 'pointer',
+            padding: '8px',
+            opacity: 0.6,
+            transition: 'opacity 0.2s ease',
+          }}
+        >
+          ✕
+        </button>
+        <button
           onClick={() => scrollTo('archives')}
           className="font-display uppercase glitch-hover"
           style={{
             fontSize: '28px',
             fontWeight: 700,
             letterSpacing: '-0.02em',
-            color: '#ffffff',
+            color: 'var(--text-primary)',
             background: 'none',
             border: 'none',
             cursor: 'pointer',
@@ -166,7 +184,7 @@ export default function Navigation() {
             fontSize: '28px',
             fontWeight: 700,
             letterSpacing: '-0.02em',
-            color: '#ffffff',
+            color: 'var(--text-primary)',
             background: 'none',
             border: 'none',
             cursor: 'pointer',
@@ -182,7 +200,7 @@ export default function Navigation() {
             fontSize: '28px',
             fontWeight: 700,
             letterSpacing: '-0.02em',
-            color: '#ffffff',
+            color: 'var(--text-primary)',
             background: 'none',
             border: 'none',
             cursor: 'pointer',
@@ -191,9 +209,6 @@ export default function Navigation() {
         >
           Contact
         </button>
-        <div style={{ marginTop: '20px' }}>
-          <ThemeToggle />
-        </div>
       </div>
     </nav>
   );

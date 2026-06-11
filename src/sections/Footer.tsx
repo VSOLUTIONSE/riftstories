@@ -29,7 +29,7 @@ export default function Footer() {
           fontSize: 'clamp(40px, 8vw, 120px)',
           fontWeight: 700,
           letterSpacing: '-0.02em',
-          color: '#ffffff',
+          color: 'var(--text-primary)',
           textDecoration: 'none',
           position: 'relative',
           display: 'inline-block',

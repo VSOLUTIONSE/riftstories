@@ -142,12 +142,13 @@ export default function ManifestoSection() {
         >
           <span
             ref={leftTextRef}
-            className="font-display text-white uppercase"
+            className="font-display uppercase"
             style={{
               fontSize: 'clamp(24px, 10vw, 120px)',
               fontWeight: 700,
               letterSpacing: '-0.02em',
               display: 'block',
+              color: 'var(--text-primary)',
             }}
           >
             HUMAN

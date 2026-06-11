@@ -115,7 +115,7 @@ export const PhotoGallery = ({
       <p className="lg:text-md my-2 text-center text-xs font-light uppercase tracking-widest text-slate-400">
       A Journey Through Visual Stories
       </p>
-      <h3 className="z-20 mx-auto max-w-2xl justify-center bg-gradient-to-r from-slate-100 via-slate-200 to-slate-100 bg-clip-text py-3 text-center text-3xl text-transparent md:text-7xl">
+      <h3 className="z-20 mx-auto max-w-2xl justify-center bg-clip-text py-3 text-center text-3xl text-transparent md:text-7xl" style={{ backgroundImage: 'linear-gradient(to right, var(--text-primary), color-mix(in srgb, var(--text-primary) 80%, transparent), var(--text-primary))' }}>
         Welcome to <span className="text-[#00f0ff]">Rift</span> <span className="text-[#E50914]">Stories</span>
       </h3>
       <div className="relative mb-8 h-[300px] md:h-[350px] w-full items-center justify-center lg:flex">
