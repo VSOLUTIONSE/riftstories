@@ -21,7 +21,7 @@ export default function Footer() {
       {/* Main CTA */}
       <a
         ref={linkRef}
-        href="mailto:hello@aivision.studio"
+        href="mailto:riftstories@outlook.com"
         className="font-display uppercase glitch-hover"
         onMouseEnter={() => setLineScale(1)}
         onMouseLeave={() => setLineScale(0)}
