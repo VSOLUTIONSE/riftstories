@@ -155,12 +155,16 @@ export const PhotoGallery = ({
           </motion.div>
         </motion.div>
       </div>
-      <div className="flex w-full justify-center">
+      <div className="flex w-full justify-center pb-16 md:pb-0">
       <Button
         className="border-[#E50914]/40 text-[#E50914] hover:bg-[#E50914]/10 shadow-[0_0_20px_rgba(229,9,20,0.15)]"
         onClick={() => {
           const el = document.getElementById('archives');
-          el?.scrollIntoView({ behavior: 'smooth' });
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            window.scrollTo({ top: document.body.scrollHeight * 0.35, behavior: 'smooth' });
+          }
         }}
       >
         View All Stories
