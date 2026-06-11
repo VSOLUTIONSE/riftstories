@@ -105,12 +105,13 @@ export default function AboutSection() {
           <div>
             <h2
               ref={headingRef}
-              className="font-display text-white uppercase"
+           className="font-display uppercase"
               style={{
               fontSize: 'clamp(24px, 3.5vw, 48px)',
               fontWeight: 700,
               letterSpacing: '-0.02em',
               lineHeight: 1.05,
+              color: 'var(--text-primary)',
             }}
           >
             <span style={{ color: '#00f0ff' }}>Creative at</span> Rift Stories
@@ -236,7 +237,7 @@ export default function AboutSection() {
                   fontWeight: 600,
                   letterSpacing: '0.05em',
                   textTransform: 'uppercase',
-                  color: '#ffffff',
+                  color: 'var(--text-primary)',
                   paddingBottom: '16px',
                   borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
                   marginBottom: '16px',

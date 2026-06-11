@@ -6,13 +6,14 @@ export default function SelectedArchives() {
       <div style={{ paddingLeft: '40px', paddingRight: '40px', maxWidth: '1440px', margin: '0 auto' }}>
         <div className="section-divider" style={{ marginBottom: '60px' }} />
         <h2
-          className="font-display text-white uppercase"
+          className="font-display uppercase"
           style={{
             fontSize: 'clamp(28px, 4vw, 56px)',
             fontWeight: 700,
             letterSpacing: '-0.02em',
             lineHeight: 1.05,
             paddingBottom: '40px',
+            color: 'var(--text-primary)',
           }}
         >
           Some of my

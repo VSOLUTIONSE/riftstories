@@ -49,12 +49,13 @@ export default function GlassInterface() {
           }}
         >
           <h3
-            className="font-display text-white uppercase"
+            className="font-display uppercase"
             style={{
               fontSize: 'clamp(28px, 5vw, 64px)',
               fontWeight: 700,
               letterSpacing: '-0.02em',
               lineHeight: 1.1,
+              color: 'var(--text-primary)',
             }}
           >
             Telling Stories.
@@ -245,11 +246,12 @@ export default function GlassInterface() {
         }}
       >
         <h3
-          className="font-display text-white uppercase"
+          className="font-display uppercase"
           style={{
             fontSize: 'clamp(28px, 5vw, 64px)',
             fontWeight: 700,
             letterSpacing: '-0.02em',
+            color: 'var(--text-primary)',
             lineHeight: 1.1,
           }}
         >

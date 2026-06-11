@@ -34,6 +34,7 @@
     --text-secondary: rgba(255, 255, 255, 0.8);
     --text-muted: rgba(255, 255, 255, 0.5);
     --text-dim: rgba(255, 255, 255, 0.4);
+    --text-primary: rgba(255, 255, 255, 0.85);
   }
 
   /* ─── Light Theme ─────────────────────────── */
@@ -64,6 +65,7 @@
     --text-secondary: rgba(0, 0, 0, 0.8);
     --text-muted: rgba(0, 0, 0, 0.5);
     --text-dim: rgba(0, 0, 0, 0.4);
+    --text-primary: rgba(0, 0, 0, 0.8);
   }
 
   .light body,
@@ -75,6 +77,59 @@
   .light .carousel-wrapper,
   [data-theme="light"] .carousel-wrapper {
     background-color: #faf6f0;
+  }
+
+  .light .carousel-title,
+  [data-theme="light"] .carousel-title {
+    color: #1a1a1a;
+  }
+
+  .light .carousel-num-text,
+  [data-theme="light"] .carousel-num-text {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .light .carousel-num-line,
+  [data-theme="light"] .carousel-num-line {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .light .carousel-description,
+  [data-theme="light"] .carousel-description {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .light .carousel-arrow-btn,
+  [data-theme="light"] .carousel-arrow-btn {
+    border-color: rgba(0, 0, 0, 0.15);
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .light .carousel-arrow-btn:hover,
+  [data-theme="light"] .carousel-arrow-btn:hover {
+    border-color: rgba(0, 0, 0, 0.4);
+    color: #1a1a1a;
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  .light .carousel-progress-track,
+  [data-theme="light"] .carousel-progress-track {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  .light .carousel-progress-fill,
+  [data-theme="light"] .carousel-progress-fill {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .light .carousel-progress-label,
+  [data-theme="light"] .carousel-progress-label {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .light .carousel-progress-item.active .carousel-progress-label,
+  [data-theme="light"] .carousel-progress-item.active .carousel-progress-label {
+    color: rgba(0, 0, 0, 0.8);
   }
 
   html {
