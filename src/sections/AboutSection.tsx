@@ -123,7 +123,7 @@ export default function AboutSection() {
               }}
             >
               <img
-                src="https://5ontctusjujuceix.private.blob.vercel-storage.com/bio.jpeg?vercel-blob-delegation=eyJzdG9yZUlkIjoic3RvcmVfNU9OVEN0dXNKdWp1Y0VpWCIsIm93bmVySWQiOiJ0ZWFtX3dpMXUyN0tvMnEwNFA5c3pKZVBuSFdUWCIsInBhdGhuYW1lIjoiKiIsIm9wZXJhdGlvbnMiOlsiZ2V0IiwiaGVhZCJdLCJ2YWxpZFVudGlsIjoxNzgxMjA2OTEyMTc0LCJpYXQiOjE3ODExNjM3MTMyODV9.1IxkUdpJsiSYeExeOSffFneNfdu4MUQAHaqljA4NV9I&vercel-blob-signature=tTCX9CrCNtxRAlpL-YywnnNhAiwDqcDBbpzED7Me5jc"
+                src="https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/bio.jpeg"
                 alt="Rift Stories AI Content Creator — profile portrait"
                 style={{
                   width: 'clamp(240px, 20vw, 340px)',

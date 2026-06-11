@@ -83,7 +83,7 @@ export const PhotoGallery = ({
       zIndex: 30,
       direction: "left" as Direction,
       size: isMobile ? 160 : 280,
-      src: "https://5ontctusjujuceix.private.blob.vercel-storage.com/ugc-bag.mp4?vercel-blob-delegation=eyJzdG9yZUlkIjoic3RvcmVfNU9OVEN0dXNKdWp1Y0VpWCIsIm93bmVySWQiOiJ0ZWFtX3dpMXUyN0tvMnEwNFA5c3pKZVBuSFdUWCIsInBhdGhuYW1lIjoiKiIsIm9wZXJhdGlvbnMiOlsiZ2V0IiwiaGVhZCJdLCJ2YWxpZFVudGlsIjoxNzgxMTcwNTUxMTc1LCJpYXQiOjE3ODExMjczNTI2NzN9.B-YsByNFXwUfTXau5TSycXDn-ifhRnleboxJRalaq3s&vercel-blob-signature=Xx6A8TfQSJqe6QzEXYRBJTVWnZgg1wIqeciChHP0t5g",
+      src: "https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/ugc-bag.mp4",
     },
     {
       id: 2,
@@ -93,7 +93,7 @@ export const PhotoGallery = ({
       zIndex: 20,
       direction: "right" as Direction,
       size: isMobile ? 180 : 280,
-      src: "https://5ontctusjujuceix.private.blob.vercel-storage.com/fashion-showcase.mp4?vercel-blob-delegation=eyJzdG9yZUlkIjoic3RvcmVfNU9OVEN0dXNKdWp1Y0VpWCIsIm93bmVySWQiOiJ0ZWFtX3dpMXUyN0tvMnEwNFA5c3pKZVBuSFdUWCIsInBhdGhuYW1lIjoiKiIsIm9wZXJhdGlvbnMiOlsiZ2V0IiwiaGVhZCJdLCJ2YWxpZFVudGlsIjoxNzgxMjEzNTY3OTA2LCJpYXQiOjE3ODExNzAzNjkwODl9.E7jS8Q69aFc6CXHUuj2CnQUxaH_5Sqym5Ik3Q_ygd80&vercel-blob-signature=tCb4CvoGyB8_Ksgc2h2kJP5b8fPle-MQBXuuCk8EbzM",
+      src: "https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/fashion-showcase.mp4",
     },
     {
       id: 3,
@@ -103,7 +103,7 @@ export const PhotoGallery = ({
       zIndex: 10,
       direction: "left" as Direction,
       size: isMobile ? 160 : 280,
-      src: "https://5ontctusjujuceix.private.blob.vercel-storage.com/fashion-concert.mp4?vercel-blob-delegation=eyJzdG9yZUlkIjoic3RvcmVfNU9OVEN0dXNKdWp1Y0VpWCIsIm93bmVySWQiOiJ0ZWFtX3dpMXUyN0tvMnEwNFA5c3pKZVBuSFdUWCIsInBhdGhuYW1lIjoiKiIsIm9wZXJhdGlvbnMiOlsiZ2V0IiwiaGVhZCJdLCJ2YWxpZFVudGlsIjoxNzgxMTcwMDMwOTE0LCJpYXQiOjE3ODExMjY4MzI0MDZ9.QVs4Z2Psvfve1MCQknY_-g-mkW_uUfRWtr2VrHJxGGI&vercel-blob-signature=HMBtfAbzmE5tRaWXA35USwpM4krD8SCm3P4Kh2m4Lik",
+      src: "https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/fashion-concert.mp4",
     },
   ];
 

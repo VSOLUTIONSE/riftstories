@@ -22,7 +22,7 @@ const slides: SlideData[] = [
       'https://images.unsplash.com/photo-1534113414509-0eec2bfb493f?w=900&h=1200&fit=crop&q=80',
     isVideo: true,
     videoUrl:
-      'https://5ontctusjujuceix.private.blob.vercel-storage.com/folk-tale.mp4?vercel-blob-delegation=eyJzdG9yZUlkIjoic3RvcmVfNU9OVEN0dXNKdWp1Y0VpWCIsIm93bmVySWQiOiJ0ZWFtX3dpMXUyN0tvMnEwNFA5c3pKZVBuSFdUWCIsInBhdGhuYW1lIjoiKiIsIm9wZXJhdGlvbnMiOlsiZ2V0IiwiaGVhZCJdLCJ2YWxpZFVudGlsIjoxNzgxMjA3NzI5ODg0LCJpYXQiOjE3ODExNjQ1MzEwMjZ9.E92_z7dxzxU8P3UVAWpDZDiOHyhWMhYuxU_mqUe52kQ&vercel-blob-signature=bDWv6yAQI4_LpcqpGDBxqtvOeKHLJSjiXBVkNXUyGl8',
+      'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/folk-tale.mp4',
   },
   {
     title: 'Hotel UGC Ad',
@@ -34,7 +34,7 @@ const slides: SlideData[] = [
       'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&h=1200&fit=crop&q=80',
     isVideo: true,
     videoUrl:
-      'https://5ontctusjujuceix.private.blob.vercel-storage.com/ugc-hotel.mp4?vercel-blob-delegation=eyJzdG9yZUlkIjoic3RvcmVfNU9OVEN0dXNKdWp1Y0VpWCIsIm93bmVySWQiOiJ0ZWFtX3dpMXUyN0tvMnEwNFA5c3pKZVBuSFdUWCIsInBhdGhuYW1lIjoiKiIsIm9wZXJhdGlvbnMiOlsiZ2V0IiwiaGVhZCJdLCJ2YWxpZFVudGlsIjoxNzgxMjA4MDc0MzUwLCJpYXQiOjE3ODExNjQ4NzU1MTJ9.v0vtiEr4n3giSdWHIdo3IiBiz63P-s_0iarLXk4A86Q&vercel-blob-signature=XkI9ByWfbN5E7eaIypKOA_1BCKz60JRCNrB0_E2liRs',
+      'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/ugc-hotel.mp4',
   },
   {
     title: 'Wonder Realm',
@@ -46,7 +46,7 @@ const slides: SlideData[] = [
       'https://images.unsplash.com/photo-1617957710614-7d0cb90a00e8?w=900&h=1200&fit=crop&q=80',
     isVideo: true,
     videoUrl:
-      'https://5ontctusjujuceix.private.blob.vercel-storage.com/kids-animation.mp4?vercel-blob-delegation=eyJzdG9yZUlkIjoic3RvcmVfNU9OVEN0dXNKdWp1Y0VpWCIsIm93bmVySWQiOiJ0ZWFtX3dpMXUyN0tvMnEwNFA5c3pKZVBuSFdUWCIsInBhdGhuYW1lIjoiKiIsIm9wZXJhdGlvbnMiOlsiZ2V0IiwiaGVhZCJdLCJ2YWxpZFVudGlsIjoxNzgxMjA4MTExODg1LCJpYXQiOjE3ODExNjQ5MTMwNTh9.-YgI5jm2KkUvt3pUOEhTBAWleThdAScG7pqbhFBHdxw&vercel-blob-signature=Buky35bTOc2PqQ8YtkPXgoVpNX49FmXWdec38Jd3hEA',
+      'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/kids-animation.mp4',
   },
   {
     title: 'Gas & Go',
@@ -58,7 +58,7 @@ const slides: SlideData[] = [
       'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&h=1200&fit=crop&q=80',
     isVideo: true,
     videoUrl:
-      'https://5ontctusjujuceix.private.blob.vercel-storage.com/marketting-ad-cooking-gas.mp4?vercel-blob-delegation=eyJzdG9yZUlkIjoic3RvcmVfNU9OVEN0dXNKdWp1Y0VpWCIsIm93bmVySWQiOiJ0ZWFtX3dpMXUyN0tvMnEwNFA5c3pKZVBuSFdUWCIsInBhdGhuYW1lIjoiKiIsIm9wZXJhdGlvbnMiOlsiZ2V0IiwiaGVhZCJdLCJ2YWxpZFVudGlsIjoxNzgxMjA4NDUxMjExLCJpYXQiOjE3ODExNjUyNTIzNjh9.hlo5ppLj1ie4tt7spxkrGDzYg8d-uIZEdi2KVkXEitI&vercel-blob-signature=jtsKfAlgvLrfmAhU3PJhhnZ9kzxdBHOgmITXRa7MGxY',
+      'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/marketting-ad-cooking-gas.mp4',
   },
 ];
 
