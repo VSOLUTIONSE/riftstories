@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ManifestoSection() {
+  const isMobile = window.innerWidth < 768;
   const sectionRef = useRef<HTMLDivElement>(null);
   const textContainerRef = useRef<HTMLDivElement>(null);
   const videoContainerRef = useRef<HTMLDivElement>(null);
@@ -25,59 +26,79 @@ export default function ManifestoSection() {
     if (!section || !textContainer || !videoContainer || !video || !leftText || !rightText || !meta) return;
 
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 60%',
-          end: 'bottom 40%',
-          scrub: 1,
-          markers: false,
-        },
-      });
+      if (isMobile) {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+          },
+        });
 
-      // At position 0, animate text container left
-      tl.fromTo(
-        textContainer,
-        { xPercent: 0 },
-        { xPercent: -10, ease: 'none' },
-        0
-      );
+        tl.fromTo(
+          textContainer,
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
+        ).fromTo(
+          videoContainer,
+          { opacity: 0 },
+          { opacity: 1, duration: 0.8 },
+          '-=0.4'
+        ).fromTo(
+          meta,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.6 },
+          '-=0.2'
+        );
 
-      // At position 0, slide right text back to original position
-      tl.fromTo(
-        rightText,
-        { x: '100%', opacity: 0.3 },
-        { x: '0%', opacity: 1, ease: 'none' },
-        0
-      );
+        tl.fromTo(
+          rightText,
+          { x: '100%', opacity: 0.3 },
+          { x: '0%', opacity: 1, duration: 0.8 },
+          '-=0.6'
+        );
+      } else {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 60%',
+            end: 'bottom 40%',
+            scrub: 1,
+            markers: false,
+          },
+        });
 
-      // At position 0, expand video container
-      tl.fromTo(
-        videoContainer,
-        { width: '0%', opacity: 0 },
-        { width: '100%', opacity: 1, ease: 'none' },
-        0
-      );
-
-      // At position 0, expand video image
-      tl.fromTo(
-        video,
-        { width: '100%', scale: 1.2 },
-        { width: '100%', scale: 1, ease: 'none' },
-        0
-      );
-
-      // Fade in metadata text
-      tl.fromTo(
-        meta,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, ease: 'none' },
-        0.3
-      );
+        tl.fromTo(
+          textContainer,
+          { xPercent: 0 },
+          { xPercent: -10, ease: 'none' },
+          0
+        ).fromTo(
+          rightText,
+          { x: '100%', opacity: 0.3 },
+          { x: '0%', opacity: 1, ease: 'none' },
+          0
+        ).fromTo(
+          videoContainer,
+          { width: '0%', opacity: 0 },
+          { width: '100%', opacity: 1, ease: 'none' },
+          0
+        ).fromTo(
+          video,
+          { width: '100%', scale: 1.2 },
+          { width: '100%', scale: 1, ease: 'none' },
+          0
+        ).fromTo(
+          meta,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, ease: 'none' },
+          0.3
+        );
+      }
     }, section);
 
     return () => ctx.revert();
-  }, []);
+  }, [isMobile]);
 
   return (
     <section
@@ -85,8 +106,8 @@ export default function ManifestoSection() {
       ref={sectionRef}
       style={{
         position: 'relative',
-        height: '300vh',
-        backgroundColor: '#050505',
+        height: isMobile ? '100vh' : '300vh',
+        backgroundColor: 'var(--void-black)',
       }}
     >
       <div
