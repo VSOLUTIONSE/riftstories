@@ -119,6 +119,9 @@ export default function ManifestoSection() {
           alignItems: 'center',
           justifyContent: 'center',
           overflow: 'hidden',
+          backgroundImage: 'url(https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/reveal.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
       >
         {/* Text Layer */}
