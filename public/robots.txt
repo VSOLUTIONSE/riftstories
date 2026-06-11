@@ -1,0 +1,8 @@
+# robots.txt for Rift Stories
+# https://riftstories.com/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://riftstories.com/sitemap.xml
