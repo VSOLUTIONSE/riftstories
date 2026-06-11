@@ -91,7 +91,7 @@ export default function AboutSection() {
         position: 'relative',
         paddingTop: '160px',
         paddingBottom: '160px',
-        backgroundColor: '#050505',
+        backgroundColor: 'var(--void-black)',
       }}
     >
       <div style={{ paddingLeft: '24px', paddingRight: '24px', maxWidth: '1440px', margin: '0 auto' }}>
@@ -157,7 +157,7 @@ export default function AboutSection() {
               style={{
                 fontSize: '16px',
                 lineHeight: 1.8,
-                color: 'rgba(255, 255, 255, 0.8)',
+                color: 'var(--text-secondary)',
                 maxWidth: '540px',
               }}
             >
@@ -180,7 +180,7 @@ export default function AboutSection() {
                 fontSize: '12px',
                 letterSpacing: '0.05em',
                 textTransform: 'uppercase',
-                color: 'rgba(255, 255, 255, 0.4)',
+                color: 'var(--text-dim)',
                 marginTop: '24px',
               }}
             >
@@ -251,7 +251,7 @@ export default function AboutSection() {
                       fontSize: '12px',
                       letterSpacing: '0.05em',
                       textTransform: 'uppercase',
-                      color: 'rgba(255, 255, 255, 0.5)',
+                      color: 'var(--text-muted)',
                       paddingTop: '8px',
                       paddingBottom: '8px',
                       transition: 'color 0.2s ease',
@@ -261,7 +261,7 @@ export default function AboutSection() {
                       (e.target as HTMLElement).style.color = '#00f0ff';
                     }}
                     onMouseLeave={(e) => {
-                      (e.target as HTMLElement).style.color = 'rgba(255, 255, 255, 0.5)';
+                      (e.target as HTMLElement).style.color = 'var(--text-muted)';
                     }}
                   >
                     {item}

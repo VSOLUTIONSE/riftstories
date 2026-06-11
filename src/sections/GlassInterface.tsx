@@ -138,7 +138,7 @@ export default function GlassInterface() {
         position: 'relative',
         width: '100%',
         height: '100vh',
-        backgroundColor: '#050505',
+        backgroundColor: 'var(--void-black)',
         overflow: 'hidden',
       }}
     >

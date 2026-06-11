@@ -167,7 +167,7 @@ export default function RealityCylinder() {
         position: 'relative',
         width: '100%',
         height: '150vh',
-        backgroundColor: '#050505',
+        backgroundColor: 'var(--void-black)',
         overflow: 'hidden',
       }}
     >

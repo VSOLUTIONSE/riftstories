@@ -10,7 +10,7 @@ export default function Footer() {
       style={{
         position: 'relative',
         height: '800px',
-        backgroundColor: '#050505',
+        backgroundColor: 'var(--void-black)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -56,7 +56,7 @@ export default function Footer() {
         style={{
           marginTop: '40px',
           fontSize: '14px',
-          color: 'rgba(255, 255, 255, 0.4)',
+          color: 'var(--text-dim)',
           letterSpacing: '0.02em',
         }}
       >
@@ -85,7 +85,7 @@ export default function Footer() {
               fontSize: '11px',
               letterSpacing: '0.05em',
               textTransform: 'uppercase',
-              color: 'rgba(255, 255, 255, 0.5)',
+              color: 'var(--text-muted)',
               textDecoration: 'none',
               transition: 'color 0.2s ease',
             }}
@@ -93,7 +93,7 @@ export default function Footer() {
               (e.target as HTMLElement).style.color = '#00f0ff';
             }}
             onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.color = 'rgba(255, 255, 255, 0.5)';
+              (e.target as HTMLElement).style.color = 'var(--text-muted)';
             }}
           >
             Works
@@ -105,7 +105,7 @@ export default function Footer() {
               fontSize: '11px',
               letterSpacing: '0.05em',
               textTransform: 'uppercase',
-              color: 'rgba(255, 255, 255, 0.5)',
+              color: 'var(--text-muted)',
               textDecoration: 'none',
               transition: 'color 0.2s ease',
             }}
@@ -113,7 +113,7 @@ export default function Footer() {
               (e.target as HTMLElement).style.color = '#00f0ff';
             }}
             onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.color = 'rgba(255, 255, 255, 0.5)';
+              (e.target as HTMLElement).style.color = 'var(--text-muted)';
             }}
           >
             About
@@ -125,7 +125,7 @@ export default function Footer() {
               fontSize: '11px',
               letterSpacing: '0.05em',
               textTransform: 'uppercase',
-              color: 'rgba(255, 255, 255, 0.5)',
+              color: 'var(--text-muted)',
               textDecoration: 'none',
               transition: 'color 0.2s ease',
             }}
@@ -133,7 +133,7 @@ export default function Footer() {
               (e.target as HTMLElement).style.color = '#00f0ff';
             }}
             onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.color = 'rgba(255, 255, 255, 0.5)';
+              (e.target as HTMLElement).style.color = 'var(--text-muted)';
             }}
           >
             Contact
@@ -151,7 +151,7 @@ export default function Footer() {
               fontSize: '11px',
               letterSpacing: '0.05em',
               textTransform: 'uppercase',
-              color: 'rgba(255, 255, 255, 0.5)',
+              color: 'var(--text-muted)',
               textDecoration: 'none',
               transition: 'color 0.2s ease',
             }}
@@ -159,7 +159,7 @@ export default function Footer() {
               (e.target as HTMLElement).style.color = '#00f0ff';
             }}
             onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.color = 'rgba(255, 255, 255, 0.5)';
+              (e.target as HTMLElement).style.color = 'var(--text-muted)';
             }}
           >
             Instagram
@@ -173,7 +173,7 @@ export default function Footer() {
               fontSize: '11px',
               letterSpacing: '0.05em',
               textTransform: 'uppercase',
-              color: 'rgba(255, 255, 255, 0.5)',
+              color: 'var(--text-muted)',
               textDecoration: 'none',
               transition: 'color 0.2s ease',
             }}
@@ -181,7 +181,7 @@ export default function Footer() {
               (e.target as HTMLElement).style.color = '#00f0ff';
             }}
             onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.color = 'rgba(255, 255, 255, 0.5)';
+              (e.target as HTMLElement).style.color = 'var(--text-muted)';
             }}
           >
             YouTube
@@ -195,7 +195,7 @@ export default function Footer() {
               fontSize: '11px',
               letterSpacing: '0.05em',
               textTransform: 'uppercase',
-              color: 'rgba(255, 255, 255, 0.5)',
+              color: 'var(--text-muted)',
               textDecoration: 'none',
               transition: 'color 0.2s ease',
             }}
@@ -203,7 +203,7 @@ export default function Footer() {
               (e.target as HTMLElement).style.color = '#00f0ff';
             }}
             onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.color = 'rgba(255, 255, 255, 0.5)';
+              (e.target as HTMLElement).style.color = 'var(--text-muted)';
             }}
           >
             Facebook
@@ -217,7 +217,7 @@ export default function Footer() {
               fontSize: '11px',
               letterSpacing: '0.05em',
               textTransform: 'uppercase',
-              color: 'rgba(255, 255, 255, 0.5)',
+              color: 'var(--text-muted)',
               textDecoration: 'none',
               transition: 'color 0.2s ease',
             }}
@@ -225,7 +225,7 @@ export default function Footer() {
               (e.target as HTMLElement).style.color = '#00f0ff';
             }}
             onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.color = 'rgba(255, 255, 255, 0.5)';
+              (e.target as HTMLElement).style.color = 'var(--text-muted)';
             }}
           >
             TikTok
@@ -237,7 +237,7 @@ export default function Footer() {
               fontSize: '11px',
               letterSpacing: '0.05em',
               textTransform: 'uppercase',
-              color: 'rgba(255, 255, 255, 0.5)',
+              color: 'var(--text-muted)',
               textDecoration: 'none',
               transition: 'color 0.2s ease',
             }}
@@ -245,7 +245,7 @@ export default function Footer() {
               (e.target as HTMLElement).style.color = '#00f0ff';
             }}
             onMouseLeave={(e) => {
-              (e.target as HTMLElement).style.color = 'rgba(255, 255, 255, 0.5)';
+              (e.target as HTMLElement).style.color = 'var(--text-muted)';
             }}
           >
             Email
@@ -255,7 +255,7 @@ export default function Footer() {
         {/* Right - year */}
         <span
           className="data-readout"
-          style={{ color: 'rgba(255, 255, 255, 0.3)' }}
+          style={{           color: 'var(--text-dim)' }}
         >
           &copy; 2024&ndash;2026
         </span>

@@ -2,7 +2,7 @@ import ElegantCarousel from '../components/ui/elegant-carousel';
 
 export default function SelectedArchives() {
   return (
-    <section id="archives" style={{ backgroundColor: '#050505', paddingTop: '120px', paddingBottom: '120px' }}>
+    <section id="archives" style={{ backgroundColor: 'var(--void-black)', paddingTop: '120px', paddingBottom: '120px' }}>
       <div style={{ paddingLeft: '40px', paddingRight: '40px', maxWidth: '1440px', margin: '0 auto' }}>
         <div className="section-divider" style={{ marginBottom: '60px' }} />
         <h2
