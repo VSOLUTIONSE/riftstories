@@ -13,7 +13,7 @@ export default function ContactWidgets() {
     >
       {/* Telegram */}
       <a
-        href="https://t.me/yourusername"
+        href="http://t.me/RIFTSTORIES"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on Telegram"
