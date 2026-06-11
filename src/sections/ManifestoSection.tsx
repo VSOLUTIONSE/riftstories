@@ -207,7 +207,7 @@ export default function ManifestoSection() {
           }}
         >
           <div className="data-readout" style={{ color: '#00f0ff' }}>
-            [RENDER_ENGINE: ON] / [EMOTION_DEPTH: 100%]
+            
           </div>
         </div>
       </div>
