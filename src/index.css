@@ -579,6 +579,10 @@
   }
 }
 
+.contact-widget-btn {
+  will-change: transform;
+}
+
 /* ─── Responsive ───────────────────────────── */
 @media (max-width: 768px) {
   .carousel-wrapper {

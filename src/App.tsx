@@ -13,7 +13,7 @@ import SelectedArchives from './sections/SelectedArchives';
 import GlassInterface from './sections/GlassInterface';
 import RealityCylinder from './sections/RealityCylinder';
 import Footer from './sections/Footer';
-import WhatsAppWidget from './components/WhatsAppWidget';
+import ContactWidgets from './components/ContactWidgets';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -82,7 +82,7 @@ function App() {
         </div>
       </main>
 
-      <WhatsAppWidget />
+      <ContactWidgets />
     </div>
   );
 }
