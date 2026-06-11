@@ -45,9 +45,8 @@ function App() {
   return (
     <div
       style={{
-        backgroundColor: '#050505',
+        backgroundColor: 'var(--void-black)',
         minHeight: '100vh',
-        cursor: 'none',
       }}
     >
       {process.env.NODE_ENV === 'development' && <Agentation />}
