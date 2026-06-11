@@ -34,7 +34,7 @@ export default function GlassInterface() {
 
     // Load background texture
     const textureLoader = new THREE.TextureLoader();
-    const bgTexture = textureLoader.load('/images/glass-bg.jpg');
+    const bgTexture = textureLoader.load('https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/glass-bg.jpg');
     bgTexture.colorSpace = THREE.SRGBColorSpace;
 
     // Background plane

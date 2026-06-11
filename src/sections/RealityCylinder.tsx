@@ -2,12 +2,12 @@ import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
 const panelImages = [
-  '/images/carousel-1.jpg',
-  '/images/carousel-2.jpg',
-  '/images/carousel-3.jpg',
-  '/images/carousel-4.jpg',
-  '/images/carousel-5.jpg',
-  '/images/carousel-6.jpg',
+  'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/carousel-1.jpg',
+  'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/carousel-2.jpg',
+  'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/carousel-3.jpg',
+  'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/carousel-4.jpg',
+  'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/carousel-5.jpg',
+  'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/carousel-6.jpg',
 ];
 
 export default function RealityCylinder() {

@@ -183,7 +183,7 @@ export default function ManifestoSection() {
         >
           <img
             ref={videoRef}
-            src="/images/reveal.jpg"
+            src="https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/reveal.jpg"
             alt="AI cinematic data center"
             loading="lazy"
             style={{
