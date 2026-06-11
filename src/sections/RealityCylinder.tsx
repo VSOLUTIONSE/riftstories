@@ -19,6 +19,8 @@ export default function RealityCylinder() {
     const container = canvasRef.current;
     if (!container) return;
 
+    const isMobile = window.innerWidth < 768;
+
     const panelCount = 6;
     const radius = 3.8;
 
@@ -38,7 +40,7 @@ export default function RealityCylinder() {
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
     renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1 : 2));
     container.appendChild(renderer.domElement);
 
     // Cylinder geometry - open-ended half-cylinder

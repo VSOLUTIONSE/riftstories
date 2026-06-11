@@ -27,7 +27,7 @@ export default function GlassInterface() {
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1 : 2));
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.2;
     container.appendChild(renderer.domElement);
@@ -49,7 +49,7 @@ export default function GlassInterface() {
 
     // Glass block
     const glassSize = isMobile ? 2.8 : 4;
-    const glassGeometry = new RoundedBoxGeometry(glassSize, glassSize, 1.2, 4, 0.1);
+    const glassGeometry = new RoundedBoxGeometry(glassSize, glassSize, 1.2, isMobile ? 2 : 4, 0.1);
     const glassMaterial = new THREE.MeshPhysicalMaterial({
       transmission: 1.0,
       thickness: 1.5,

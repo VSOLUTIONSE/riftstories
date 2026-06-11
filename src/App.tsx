@@ -67,13 +67,19 @@ function App() {
         <SelectedArchives />
 
         {/* 5. Glass Interface */}
-        <GlassInterface />
+        <div className="content-visibility-auto">
+          <GlassInterface />
+        </div>
 
         {/* 6. Reality Cylinder */}
-        <RealityCylinder />
+        <div className="content-visibility-auto">
+          <RealityCylinder />
+        </div>
 
         {/* 7. Footer / Contact */}
-        <Footer />
+        <div className="content-visibility-auto">
+          <Footer />
+        </div>
       </main>
 
       <WhatsAppWidget />
