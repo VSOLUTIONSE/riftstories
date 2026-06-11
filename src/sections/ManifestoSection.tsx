@@ -119,6 +119,9 @@ export default function ManifestoSection() {
           alignItems: 'center',
           justifyContent: 'center',
           overflow: 'hidden',
+          backgroundImage: 'url(https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/reveal.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
       >
         {/* Text Layer */}
@@ -207,7 +210,7 @@ export default function ManifestoSection() {
           }}
         >
           <div className="data-readout" style={{ color: '#00f0ff' }}>
-            [RENDER_ENGINE: ON] / [EMOTION_DEPTH: 100%]
+            
           </div>
         </div>
       </div>
