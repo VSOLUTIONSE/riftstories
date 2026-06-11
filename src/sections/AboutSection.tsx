@@ -24,6 +24,8 @@ export default function AboutSection() {
 
     if (!section || !heading || !bio || !servicesEl) return;
 
+    if (window.innerWidth < 768) return;
+
     const ctx = gsap.context(() => {
       // Heading entrance
       gsap.fromTo(

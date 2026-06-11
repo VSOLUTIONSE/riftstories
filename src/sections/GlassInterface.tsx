@@ -6,6 +6,9 @@ export default function GlassInterface() {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const rafRef = useRef<number>(0);
+  const isMobile = window.innerWidth < 768;
+
+  if (isMobile) return null;
 
   useEffect(() => {
     const container = canvasContainerRef.current;

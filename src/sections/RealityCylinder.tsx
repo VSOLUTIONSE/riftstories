@@ -14,6 +14,9 @@ export default function RealityCylinder() {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
   const rafRef = useRef<number>(0);
+  const isMobile = window.innerWidth < 768;
+
+  if (isMobile) return null;
 
   useEffect(() => {
     const container = canvasRef.current;
