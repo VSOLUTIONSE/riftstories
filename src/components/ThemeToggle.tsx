@@ -12,11 +12,27 @@ export default function ThemeToggle() {
   if (!mounted) {
     return (
       <button
-        className="font-body text-xs tracking-[0.05em] uppercase opacity-40"
-        style={{ width: '40px', height: '40px', background: 'none', border: 'none', cursor: 'pointer' }}
         aria-label="Toggle theme"
+        style={{
+          background: 'none',
+          border: 'none',
+          cursor: 'default',
+          color: 'rgba(255,255,255,0.4)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '6px',
+          fontSize: '12px',
+          letterSpacing: '0.05em',
+          textTransform: 'uppercase',
+          fontFamily: "'Inter', sans-serif",
+          opacity: 0.4,
+          visibility: 'visible',
+        }}
       >
-        —
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ opacity: 0 }}>
+          <circle cx="12" cy="12" r="5" />
+        </svg>
+        <span>—</span>
       </button>
     );
   }
