@@ -13,6 +13,42 @@ interface SlideData {
 
 const slides: SlideData[] = [
   {
+    title: 'Luxury Bag UGC',
+    subtitle: 'Exotic Brand — User-Generated Content',
+    description:
+      'A cinematic UGC ad for a leading exotic luxury bag brand. Every frame highlights the meticulous craftsmanship, rich texture, and the quiet confidence of understated elegance.',
+    accent: '#d4a853',
+    imageUrl:
+      'https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=900&h=1200&fit=crop&q=80',
+    isVideo: true,
+    videoUrl:
+      'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/ugc-bag.mp4',
+  },
+  {
+    title: 'Amura Collection',
+    subtitle: 'Luxury Clothing Brand — Showcase',
+    description:
+      'A visual showcase for Amura, where contemporary design meets timeless tailoring. Each piece tells a story of refined craftsmanship and bold sophistication.',
+    accent: '#1a1a2e',
+    imageUrl:
+      'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=900&h=1200&fit=crop&q=80',
+    isVideo: true,
+    videoUrl:
+      'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/fashion-showcase.mp4',
+  },
+  {
+    title: 'Fashion Concert Runway',
+    subtitle: 'Live Runway — Music & Fashion',
+    description:
+      'An electrifying fashion concert runway where music and design collide. Models move to the rhythm, creating an immersive live experience that blurs the line between performance and art.',
+    accent: '#E50914',
+    imageUrl:
+      'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=900&h=1200&fit=crop&q=80',
+    isVideo: true,
+    videoUrl:
+      'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/fashion-concert.mp4',
+  },
+  {
     title: 'Folk Tale',
     subtitle: 'African Drama — Coming of Age Story',
     description:
@@ -68,6 +104,7 @@ export default function ElegantCarousel() {
   const [progress, setProgress] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [videoPlaying, setVideoPlaying] = useState(false);
+  const [resettingProgress, setResettingProgress] = useState(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const progressRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -81,7 +118,9 @@ export default function ElegantCarousel() {
     (index: number, _dir?: 'next' | 'prev') => {
       if (isTransitioning || index === currentIndex) return;
       setIsTransitioning(true);
+      setResettingProgress(true);
       setProgress(0);
+      setTimeout(() => setResettingProgress(false), 80);
 
       setTimeout(() => {
         setCurrentIndex(index);
@@ -332,6 +371,7 @@ export default function ElegantCarousel() {
                 style={{
                   width: index === currentIndex ? `${progress}%` : index < currentIndex ? '100%' : '0%',
                   backgroundColor: index === currentIndex ? currentSlide.accent : undefined,
+                  transition: index === currentIndex && resettingProgress ? 'none' : undefined,
                 }}
               />
             </div>
