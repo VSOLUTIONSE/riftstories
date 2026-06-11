@@ -230,6 +230,7 @@ export default function ElegantCarousel() {
                   src={currentSlide.videoUrl}
                   className="carousel-image"
                   playsInline
+                  preload="metadata"
                   aria-label={currentSlide.title}
                   title={currentSlide.title}
                   onClick={() => {

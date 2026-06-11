@@ -247,6 +247,20 @@ export const components = {
   },
 } as const;
 
+export const themes = {
+  light: {
+    void: '#faf6f0',
+    white: '#1a1a1a',
+    textPrimary: '#1a1a1a',
+    textSecondary: 'rgba(0, 0, 0, 0.8)',
+    textMuted: 'rgba(0, 0, 0, 0.5)',
+    textDim: 'rgba(0, 0, 0, 0.4)',
+    borderSubtle: 'rgba(0, 0, 0, 0.08)',
+    borderLight: 'rgba(0, 0, 0, 0.12)',
+    bgElevated: 'rgba(0, 0, 0, 0.03)',
+  },
+} as const;
+
 /* ─── Usage Guide ──────────────────────────────
  *
  *   import { colors, fonts, spacing, components } from '@/design-system'

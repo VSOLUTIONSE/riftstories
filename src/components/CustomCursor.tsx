@@ -1,6 +1,9 @@
 import { useEffect, useRef } from 'react';
+import { useIsTouchDevice } from '@/hooks/use-is-touch-device';
 
 export default function CustomCursor() {
+  const isTouch = useIsTouchDevice();
+
   const dotRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
   const pos = useRef({ x: 0, y: 0 });
@@ -8,6 +11,8 @@ export default function CustomCursor() {
   const isHovering = useRef(false);
 
   useEffect(() => {
+    if (isTouch) return;
+
     const onMouseMove = (e: MouseEvent) => {
       target.current = { x: e.clientX, y: e.clientY };
     };
@@ -70,7 +75,9 @@ export default function CustomCursor() {
       document.removeEventListener('mouseout', onMouseOut);
       cancelAnimationFrame(raf);
     };
-  }, []);
+  }, [isTouch]);
+
+  if (isTouch) return null;
 
   return (
     <>

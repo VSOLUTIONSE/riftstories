@@ -13,7 +13,7 @@ import SelectedArchives from './sections/SelectedArchives';
 import GlassInterface from './sections/GlassInterface';
 import RealityCylinder from './sections/RealityCylinder';
 import Footer from './sections/Footer';
-import WhatsAppWidget from './components/WhatsAppWidget';
+import ContactWidgets from './components/ContactWidgets';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,9 +45,8 @@ function App() {
   return (
     <div
       style={{
-        backgroundColor: '#050505',
+        backgroundColor: 'var(--void-black)',
         minHeight: '100vh',
-        cursor: 'none',
       }}
     >
       {process.env.NODE_ENV === 'development' && <Agentation />}
@@ -68,16 +67,22 @@ function App() {
         <SelectedArchives />
 
         {/* 5. Glass Interface */}
-        <GlassInterface />
+        <div className="content-visibility-auto">
+          <GlassInterface />
+        </div>
 
         {/* 6. Reality Cylinder */}
-        <RealityCylinder />
+        <div className="content-visibility-auto">
+          <RealityCylinder />
+        </div>
 
         {/* 7. Footer / Contact */}
-        <Footer />
+        <div className="content-visibility-auto">
+          <Footer />
+        </div>
       </main>
 
-      <WhatsAppWidget />
+      <ContactWidgets />
     </div>
   );
 }

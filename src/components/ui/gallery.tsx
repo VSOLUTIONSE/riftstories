@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, useMotionValue } from "framer-motion";
+import { useIsVisible } from "@/hooks/use-is-visible";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -12,6 +13,7 @@ export const PhotoGallery = ({
   const [isVisible, setIsVisible] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [galleryRef, galleryVisible] = useIsVisible<HTMLDivElement>();
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -108,7 +110,7 @@ export const PhotoGallery = ({
   ];
 
   return (
-    <div className="mt-40 relative">
+    <div ref={galleryRef} className="mt-40 relative">
        <div className="absolute inset-0 max-md:hidden top-[200px] -z-10 h-[300px] w-full bg-transparent bg-[linear-gradient(to_right,#57534e_1px,transparent_1px),linear-gradient(to_bottom,#57534e_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
       <p className="lg:text-md my-2 text-center text-xs font-light uppercase tracking-widest text-slate-400">
       A Journey Through Visual Stories
@@ -146,6 +148,7 @@ export const PhotoGallery = ({
                     height={photo.size}
                     src={photo.src}
                     direction={photo.direction}
+                    isVisible={galleryVisible}
                   />
                 </motion.div>
               ))}
@@ -182,12 +185,14 @@ export const VideoCard = ({
   direction,
   width,
   height,
+  isVisible,
 }: {
   src: string;
   className?: string;
   direction?: Direction;
   width: number;
   height: number;
+  isVisible: boolean;
 }) => {
   const [rotation, setRotation] = useState<number>(0);
   const x = useMotionValue(200);
@@ -253,7 +258,7 @@ export const VideoCard = ({
       <div className="relative h-full w-full overflow-hidden rounded-3xl shadow-sm">
         <video
           className={cn("rounded-3xl w-full h-full")}
-          src={src}
+          src={isVisible ? src : undefined}
           autoPlay
           muted
           loop

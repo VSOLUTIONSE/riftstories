@@ -31,6 +31,50 @@
     --input: 0 0% 15%;
     --ring: 186 100% 50%;
     --radius: 0px;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+    --text-muted: rgba(255, 255, 255, 0.5);
+    --text-dim: rgba(255, 255, 255, 0.4);
+  }
+
+  /* ─── Light Theme ─────────────────────────── */
+  .light,
+  [data-theme="light"] {
+    --void-black: #faf6f0;
+    --pure-white: #1a1a1a;
+    --border-subtle: rgba(0, 0, 0, 0.08);
+    --background: 38 30% 96%;
+    --foreground: 0 0% 10%;
+    --card: 38 30% 96%;
+    --card-foreground: 0 0% 10%;
+    --popover: 38 30% 96%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 186 100% 50%;
+    --primary-foreground: 0 0% 2%;
+    --secondary: 38 20% 90%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 38 20% 90%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 186 100% 50%;
+    --accent-foreground: 0 0% 2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 38 15% 85%;
+    --input: 38 15% 85%;
+    --ring: 186 100% 50%;
+    --text-secondary: rgba(0, 0, 0, 0.8);
+    --text-muted: rgba(0, 0, 0, 0.5);
+    --text-dim: rgba(0, 0, 0, 0.4);
+  }
+
+  .light body,
+  [data-theme="light"] body {
+    background-color: #faf6f0;
+    color: #1a1a1a;
+  }
+
+  .light .carousel-wrapper,
+  [data-theme="light"] .carousel-wrapper {
+    background-color: #faf6f0;
   }
 
   html {
@@ -42,6 +86,7 @@
     background-color: var(--void-black);
     color: var(--pure-white);
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   /* Only hide cursor on devices with a fine pointer (mouse users),
@@ -169,6 +214,29 @@
   ::-webkit-scrollbar-thumb:hover {
     background: var(--core-cyan);
   }
+}
+
+/* ─── Falling Pattern Animation ─────────────── */
+@keyframes falling-pattern-scroll {
+  from {
+    background-position: 0px 220px, 3px 220px, 151.5px 337.5px, 25px 24px, 28px 24px, 176.5px 150px, 50px 16px, 53px 16px, 201.5px 91px, 75px 224px, 78px 224px, 226.5px 230.5px, 100px 19px, 103px 19px, 251.5px 121px, 125px 120px, 128px 120px, 276.5px 187px, 150px 31px, 153px 31px, 301.5px 120.5px, 175px 235px, 178px 235px, 326.5px 384.5px, 200px 121px, 203px 121px, 351.5px 228.5px, 225px 224px, 228px 224px, 376.5px 364.5px, 250px 26px, 253px 26px, 401.5px 105px, 275px 75px, 278px 75px, 426.5px 180px;
+  }
+  to {
+    background-position: 0px 6800px, 3px 6800px, 151.5px 6917.5px, 25px 13632px, 28px 13632px, 176.5px 13758px, 50px 5416px, 53px 5416px, 201.5px 5491px, 75px 17175px, 78px 17175px, 226.5px 17301.5px, 100px 5119px, 103px 5119px, 251.5px 5221px, 125px 8428px, 128px 8428px, 276.5px 8495px, 150px 9876px, 153px 9876px, 301.5px 9965.5px, 175px 13391px, 178px 13391px, 326.5px 13540.5px, 200px 14741px, 203px 14741px, 351.5px 14848.5px, 225px 18770px, 228px 18770px, 376.5px 18910.5px, 250px 5082px, 253px 5082px, 401.5px 5161px, 275px 6375px, 278px 6375px, 426.5px 6480px;
+  }
+}
+
+.falling-pattern-anim {
+  animation-name: falling-pattern-scroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: background-position;
+}
+
+/* ─── Content Visibility for Below-Fold Sections ─── */
+.content-visibility-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 100vh;
 }
 
 /* ─── Responsive Footer ─────────────────────── */
@@ -509,6 +577,10 @@
     transition: none !important;
     animation: none !important;
   }
+}
+
+.contact-widget-btn {
+  will-change: transform;
 }
 
 /* ─── Responsive ───────────────────────────── */

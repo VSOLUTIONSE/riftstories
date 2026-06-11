@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navigation() {
   const navRef = useRef<HTMLElement>(null);
@@ -62,7 +63,9 @@ export default function Navigation() {
             Contact
           </button>
         </div>
-        <div className="flex justify-end" />
+        <div className="flex justify-end">
+          <ThemeToggle />
+        </div>
       </div>
     </nav>
   );

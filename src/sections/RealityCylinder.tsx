@@ -2,12 +2,12 @@ import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
 const panelImages = [
-  '/images/carousel-1.jpg',
-  '/images/carousel-2.jpg',
-  '/images/carousel-3.jpg',
-  '/images/carousel-4.jpg',
-  '/images/carousel-5.jpg',
-  '/images/carousel-6.jpg',
+  'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/carousel-1.jpg',
+  'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/carousel-2.jpg',
+  'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/carousel-3.jpg',
+  'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/carousel-4.jpg',
+  'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/carousel-5.jpg',
+  'https://bvhrxctzw3eenxbl.public.blob.vercel-storage.com/carousel-6.jpg',
 ];
 
 export default function RealityCylinder() {
@@ -18,6 +18,8 @@ export default function RealityCylinder() {
   useEffect(() => {
     const container = canvasRef.current;
     if (!container) return;
+
+    const isMobile = window.innerWidth < 768;
 
     const panelCount = 6;
     const radius = 3.8;
@@ -38,7 +40,7 @@ export default function RealityCylinder() {
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
     renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1 : 2));
     container.appendChild(renderer.domElement);
 
     // Cylinder geometry - open-ended half-cylinder
@@ -165,7 +167,7 @@ export default function RealityCylinder() {
         position: 'relative',
         width: '100%',
         height: '150vh',
-        backgroundColor: '#050505',
+        backgroundColor: 'var(--void-black)',
         overflow: 'hidden',
       }}
     >

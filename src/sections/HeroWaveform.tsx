@@ -8,7 +8,7 @@ export default function HeroWaveform() {
         position: 'relative',
         width: '100%',
         minHeight: '100vh',
-        backgroundColor: '#050505',
+        backgroundColor: 'var(--void-black)',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -26,7 +26,7 @@ export default function HeroWaveform() {
       >
         <FallingPattern
           color="#00f0ff"
-          backgroundColor="#050505"
+          backgroundColor="var(--void-black)"
           duration={200}
           blurIntensity="0.5em"
           density={1.5}
